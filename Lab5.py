@@ -38,10 +38,8 @@ def sum_of_natural_numbers(n):
 # *******
 def centered_star_pyramid(n):
     result = ''
-    for i in range(1, n + 1):
-        spaces = '  ' * (n - i)
-        stars = '*' * (2 * i - 1)
-        result = spaces + stars + '\n'
-    return result.strip()
-    # spaces for n = 4 (' ' x (4 - 3))= one space
-    # stars for n = 4 ('*' x ( 2 x 4 - 1)) = 7 stars
+    for i in range(n):
+       result += ' ' * (n - i - 1)
+       result += '*' * (2 * i + 1)
+       result += '\n'
+    return result.rstrip() 
